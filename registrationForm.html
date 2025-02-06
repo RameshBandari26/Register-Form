@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?nature,abstract') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-900 bg-opacity-50">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96 animate-fade-in">
+        <h2 class="text-2xl font-bold text-center mb-6">Registration Form</h2>
+        <form action="" class="space-y-4">
+            <div>
+                <label for="Name" class="block font-semibold">Name</label>
+                <input type="text" id="Name" required placeholder="Enter your name" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <label for="FatherName" class="block font-semibold">Father's Name</label>
+                <input type="text" id="FatherName" placeholder="Enter your father's name" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <label for="email" class="block font-semibold">Email ID</label>
+                <input type="email" id="email" required placeholder="Enter your email" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <label for="pwd" class="block font-semibold">Password</label>
+                <input type="password" id="pwd" required placeholder="Enter your password" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <label for="phone" class="block font-semibold">Phone No</label>
+                <input type="tel" id="phone" required placeholder="Enter your phone number" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+                <span class="block font-semibold">Gender</span>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="gender" class="mr-2"> Male
+                </label>
+                <label class="inline-flex items-center ml-4">
+                    <input type="radio" name="gender" class="mr-2"> Female
+                </label>
+            </div>
+            <div class="flex justify-between">
+                <button type="reset" class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-transform transform hover:scale-105">Reset</button>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-transform transform hover:scale-105">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector(".animate-fade-in").classList.add("opacity-0");
+            setTimeout(() => {
+                document.querySelector(".animate-fade-in").classList.remove("opacity-0");
+                document.querySelector(".animate-fade-in").classList.add("transition-opacity", "duration-1000", "opacity-100");
+            }, 200);
+        });
+    </script>
+</body>
+</html>
